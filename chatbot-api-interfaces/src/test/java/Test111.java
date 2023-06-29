@@ -19,8 +19,8 @@ import java.io.IOException;
  * @description:
  */
 @RunWith(SpringRunner.class)
-//@DataJpaTest
-@SpringBootTest(classes = ApiApplicationInterfaces.class)
+@DataJpaTest
+//@SpringBootTest(classes = ApiApplicationInterfaces.class)
 public class Test111 {
 
     private Logger logger = LoggerFactory.getLogger(Test111.class);

@@ -1,6 +1,0 @@
-server:
-  port: 8090
-
-chatbot-api:
-  groupId: 28885518425541
-  cookie: zsxq_access_token=B92ADBDF-AC4B-29B1-65ED-B432310524CC_C5E8759FC83E1FA6; zsxqsessionid=febeac8370cd6383c71578c2a65a9bd4; abtest_env=product
