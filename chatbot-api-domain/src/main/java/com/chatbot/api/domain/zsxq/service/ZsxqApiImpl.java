@@ -19,6 +19,7 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
@@ -27,6 +28,7 @@ import java.io.IOException;
  * @createTime: 2023.06.29
  * @description:
  */
+@Service
 public class ZsxqApiImpl implements IZsxqApi {
 
 

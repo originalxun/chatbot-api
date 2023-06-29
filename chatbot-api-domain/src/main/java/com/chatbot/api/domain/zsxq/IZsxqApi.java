@@ -1,6 +1,7 @@
 package com.chatbot.api.domain.zsxq;
 
 import com.chatbot.api.domain.zsxq.model.aggregates.UnAnsweredQuestionsAggregates;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
@@ -9,6 +10,7 @@ import java.io.IOException;
  * @createTime: 2023.06.29
  * @description:知识星球 API 接口
  */
+
 public interface IZsxqApi {
 
     // 未回答列表

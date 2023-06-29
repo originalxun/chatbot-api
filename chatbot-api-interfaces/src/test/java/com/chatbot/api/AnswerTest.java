@@ -1,12 +1,13 @@
-import com.api.chatbot.ApiApplicationInterfaces;
+package com.chatbot.api;
+
 import com.chatbot.api.domain.zsxq.IZsxqApi;
 import com.chatbot.api.domain.zsxq.model.aggregates.UnAnsweredQuestionsAggregates;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -19,11 +20,10 @@ import java.io.IOException;
  * @description:
  */
 @RunWith(SpringRunner.class)
-@DataJpaTest
-//@SpringBootTest(classes = ApiApplicationInterfaces.class)
-public class Test111 {
+@SpringBootTest
+public class AnswerTest {
 
-    private Logger logger = LoggerFactory.getLogger(Test111.class);
+    private Logger logger = LoggerFactory.getLogger(AnswerTest.class);
 
     @Value("${chatbot-api.groupId}")
     private String groupId;
@@ -31,7 +31,7 @@ public class Test111 {
     @Value("${chatbot-api.cookie}")
     private String cookie;
 
-    @Resource
+    @Autowired
     private IZsxqApi zsxqApi;
 
 
