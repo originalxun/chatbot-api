@@ -9,14 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cahtbot-api-interfaces</artifactId>
+    <artifactId>chatbot-api-interfaces</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-
-
 
     <dependencies>
         <dependency>
@@ -62,12 +60,12 @@
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpmime</artifactId>
         </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>org.testng</groupId>-->
-        <!--            <artifactId>testng</artifactId>-->
-        <!--            <version>RELEASE</version>-->
-        <!--            <scope>test</scope>-->
-        <!--        </dependency>-->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/net.sf.json-lib/json-lib -->
         <dependency>
             <groupId>net.sf.json-lib</groupId>
@@ -85,4 +83,5 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
+
 </project>

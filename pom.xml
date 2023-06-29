@@ -6,8 +6,9 @@
     <modules>
         <module>chatbot-api-domain</module>
         <module>chatbot-api-application</module>
-        <module>chatbot-api-interfaces</module>
+        <module>cahtbot-api-interfaces</module>
         <module>chatbot-api-infrastructure</module>
+        <module>chatbot-api-interfaces</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -75,12 +76,12 @@
                 <artifactId>httpmime</artifactId>
                 <version>4.5.6</version>
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>org.testng</groupId>-->
-<!--                <artifactId>testng</artifactId>-->
-<!--                <version>RELEASE</version>-->
-<!--                <scope>test</scope>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>RELEASE</version>
+                <scope>test</scope>
+            </dependency>
             <!-- https://mvnrepository.com/artifact/net.sf.json-lib/json-lib -->
             <dependency>
                 <groupId>net.sf.json-lib</groupId>

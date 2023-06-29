@@ -1,6 +1,5 @@
 import com.chatbot.api.domain.zsxq.IZsxqApi;
 import com.chatbot.api.domain.zsxq.model.aggregates.UnAnsweredQuestionsAggregates;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.junit.jupiter.api.Test;
 
+import javax.annotation.Resource;
 import java.io.IOException;
 
 /**
@@ -20,7 +21,7 @@ import java.io.IOException;
 @SpringBootTest
 public class SpringBootRunTest {
 
-//    private Logger logger = LoggerFactory.getLogger(SpringBootRunTest.class);
+    private Logger logger = LoggerFactory.getLogger(SpringBootRunTest.class);
 
     @Value("${chatbot-api.groupId}")
     private String groupId;
@@ -28,14 +29,15 @@ public class SpringBootRunTest {
     @Value("${chatbot-api.cookie}")
     private String cookie;
 
-    @Autowired
+    @Resource
     private IZsxqApi zsxqApi;
 
 
     @Test
     public void test_zsxqApi() throws IOException {
-        UnAnsweredQuestionsAggregates unAnsweredQuestionsAggregates = zsxqApi.queryUnAnsweredQuestionsAggregates(groupId, cookie);
-        System.out.println(unAnsweredQuestionsAggregates);
+//        UnAnsweredQuestionsAggregates unAnsweredQuestionsAggregates = zsxqApi.queryUnAnsweredQuestionsAggregates(groupId, cookie);
+//        System.out.println(unAnsweredQuestionsAggregates);
 //        logger.info("测试结果：{}",unAnsweredQuestionsAggregates);
+        System.out.println("1");
     }
 }

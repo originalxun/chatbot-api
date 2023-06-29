@@ -20,8 +20,6 @@ import java.io.IOException;
  * @description:
  */
 public class ApiTest {
-
-
     @Test
     public void questionsAndAnswers() throws IOException {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
@@ -97,4 +95,5 @@ public class ApiTest {
         }
 
     }
+
 }
