@@ -1,6 +1,9 @@
 package com.chatbot.api.domain.zsxq.model.req;
 
+import jdk.nashorn.internal.objects.annotations.Constructor;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author: fly
@@ -12,4 +15,13 @@ public class ReqData {
     private String text;
     private String[] image_ids = new String[]{};
     private boolean silenced;
+
+    public ReqData() {
+    }
+
+    public ReqData(String text, boolean silenced) {
+        this.text = text;
+        this.silenced = silenced;
+    }
+
 }
