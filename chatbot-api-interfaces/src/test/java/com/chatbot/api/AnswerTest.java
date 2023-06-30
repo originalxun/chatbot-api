@@ -2,6 +2,9 @@ package com.chatbot.api;
 
 import com.chatbot.api.domain.zsxq.IZsxqApi;
 import com.chatbot.api.domain.zsxq.model.aggregates.UnAnsweredQuestionsAggregates;
+import com.chatbot.api.domain.zsxq.model.res.RespData;
+import com.chatbot.api.domain.zsxq.model.vo.Question;
+import com.chatbot.api.domain.zsxq.model.vo.Topics;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -13,6 +16,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * @author: fly
@@ -38,9 +42,21 @@ public class AnswerTest {
     @Test
     public void zsxqApiTest() throws IOException {
         UnAnsweredQuestionsAggregates unAnsweredQuestionsAggregates = zsxqApi.queryUnAnsweredQuestionsAggregates(groupId, cookie);
-        System.out.println(unAnsweredQuestionsAggregates);
         logger.info("测试结果：{}",unAnsweredQuestionsAggregates);
-//        System.out.println("1");
+
+        RespData resp_data = unAnsweredQuestionsAggregates.getResp_data();
+        List<Topics> topics = resp_data.getTopics();
+
+        for (Topics topic : topics) {
+            String topicId = topic.getTopic_id();
+            String questionText = topic.getQuestion().getText();
+//            String questionText = question.getText();
+
+            logger.info("tipicId：{}，text:{}",topicId,questionText);
+
+            // 回答问题
+            zsxqApi.answer(groupId,cookie,topicId,questionText,false);
+        }
     }
 
     @Test
